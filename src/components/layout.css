@@ -229,7 +229,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #000080;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -246,7 +246,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #000080;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -263,7 +263,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #000080;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -280,7 +280,7 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #000080;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -615,8 +615,58 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+.index-post-container {
+    display: block;
+    padding: .2rem;
+  }
+.index-post-img {
+  width: 100%;
+  padding: 0 2rem 2rem 2rem;
+}
+.index-post {
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+}
+.team-name {
+  display: none;
+}
+
+nav ul {
+  display: none;
+}
+
+.is-active {
+   display: block;
+ }
+
+@media only screen and (min-width: 580px) {
+  /* if width more than 580px */
+  .index-post-container {
+    display: flex;
+    padding: .2rem;
+  }
+  .index-post-img {
+    width: 25%;
+    margin: 0 .5rem 0 0;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .index-post {
+    width: 75%;
+    margin: 0 0 0 .5rem;
+  }
+  .team-name {
+    display: inline-block;
+  }
+  nav ul {
+    display: block;
+    margin-bottom: 0;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 0 1em 0 1em;
+  }
+  
+  #menu-btn {
+    display: none;
   }
 }

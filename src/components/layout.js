@@ -18,6 +18,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -25,7 +29,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <div>
+      <Header siteTitle={data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks} />
+    </div>
+    
       <div
         style={{
           margin: `0 auto`,
@@ -35,6 +42,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+    
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
